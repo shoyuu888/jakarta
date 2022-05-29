@@ -1,9 +1,9 @@
 <html>
 <head>
-<title>LOGIN</title>
+<title>admin</title>
 
 <link href="css/global.css" rel="stylesheet">
-<link href="css/login.css" rel="stylesheet" media="screen and (min-width: 1000px)">
+<link href="css/admin.css" rel="stylesheet" media="screen and (min-width: 1000px)">
 <link href="css/phone.css" rel="stylesheet" media="screen and (max-width: 999.9px)">
 <link href="fontawesome/css/all.css" rel="stylesheet">
 <link href="bxslider/jquery.bxslider.css" rel="stylesheet">
@@ -37,6 +37,15 @@
 			return false;
 		});
 	});
+    $(function(){
+    function receiveMessageFromIframePage (event) {
+        var height = ('receiveMessageFromIframePage',event.data.h);
+        console.log(height);//接收source.html頁面所回傳的高度值
+        $('#myIframe').height(height);//將取得的高度，變更myIframe高度
+
+    }
+    window.addEventListener("message", receiveMessageFromIframePage, false);//監聽receiveMessageFromIframePage
+});
 </script>
 
 </head>
@@ -44,7 +53,7 @@
 <div class="header full-width clearfix">
 	<div class="fixed-width">
 		<div class="logo">
-			雅加達<span>醬油旅遊</span>
+			歡迎<span>ADMIN</span>
 		</div>
 		<div class="menu">
 			<a href="#">Menu<i class="fas fa-bars"></i></a>
@@ -59,58 +68,37 @@
 		<li><a href="index.html">最新資訊</a></li>
 	</ul>
 	<div>
-		<a href="sign_up.html">註冊</a>
-		<a href="login.html">登入</a>
+		<a href="logout.html">登出</a>
 	</div>
 </div>
 <div class="banner full-width clearfix">
 	<div class="fixed-width">
 		<div class="slider">
 			<div class="form">
-				<form action="MAINPG.html" method="post">
-				<label for="account">帳號</label><br>
-				<input type="text" id="account" name="account" placeholder="請輸入您的email或電話號碼">
-				<br>
-				<label for="password">密碼</label><br>
-				<input type="text" id="password" name="password" placeholder="請輸入您的密碼">
-				<br>
-				<input type="submit" name="login" value="確認送出">
-				<a href="sign_up.html">加入醬油</a>
-				<hr>
-				</form>
-			
-			<div class="ps">
-				<a href="forget.php">忘記密碼</a>
-			</div>    
+                <iframe src="check1.html" name="iframe_1"></iframe>
 		</div>
 		</div>
 		<div class="main">
 			<div>
-				<h2>醬油旅遊</h2>
-                <p>
-                在家很無聊？<br>讓我們<br>帶您找回最舒適的一天
-                </p>
+				<h2>會員搜尋</h2>
+                <form action="check1.html" method="post">
+                <input type="text" id="search" name="search" placeholder="點擊搜尋">
+                <input type="submit" name="login" value="搜尋">
+                </form>
 			</div>
-			<div>
-				<h2>醬油旅遊</h2>
-                <p>
-                在家很無聊？<br>讓我們<br>帶您找回最舒適的一天
-                </p>
+			<div class="d">
+				<h2>訂單查詢</h2>
+                <form action="check2.html" method="post">
+                    <input type="checkbox" id="A" name="choice" value="A"><label for="A"><h4>海島漫步</h4></label>
+                    <input type="checkbox" id="B" name="choice" value="B"><label for="B"><h4>城街走訪</h4></label>
+                    <input type="submit" value="送出">
+                </form>
 			</div>
             
 		</div>
 	</div>	
 </div>
 
-<div class="notified full-width">
-	<div class="fixed-width">
-		<h2>了解更多？</h2>
-		<p>與醬油一起探索世界大小事</p>
-		<form>
-			<input name="email" type="email" placeholder="Email address"><button>Sign Up</button>
-		</form>
-	</div>
-</div>
 <div class="map full-width clearfix">
 	<div class="fixed-width">
 		<div>

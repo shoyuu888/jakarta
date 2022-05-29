@@ -1,0 +1,6 @@
+table,tr,td,th{
+    color: white;
+    font-size: 1.1em;
+    border-bottom: 1px solid rgb(253, 253, 253);
+}
+tr:hover {background-color: #D6EEEE;}

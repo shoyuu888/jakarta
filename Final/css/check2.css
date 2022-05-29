@@ -1,0 +1,53 @@
+
+.full-width {
+	width: 100%;
+}
+
+.fixed-width {
+display: flex;
+justify-content: space-between;
+}
+
+
+/* banner start */
+
+.banner {
+	background-color: #4e5266;
+	text-align: center;
+}
+
+	.slider {
+		width: 50%;
+		overflow: hidden;
+		float: right;
+        color: #4cabb1;
+	}
+	
+	
+	.main {
+		width: 50%;
+		float: left;color: #69c7ad;
+	}
+
+	h1{
+        font-size: 3em;
+    }
+	
+		table,tr,td,th{
+            color: white;
+            font-size: 1.2em;
+            margin: 0 auto;
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+        tr:hover {background-color: #D6EEEE;}
+
+
+
+
+
+
+
+
+
+
+
