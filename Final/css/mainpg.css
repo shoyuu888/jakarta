@@ -2,6 +2,10 @@
 .full-width {
 	width: 100%;
 }
+.fixed-width {
+	width: 1000px;
+	margin: auto;
+}
 
 .fixed-width {
 	width: 1000px;
@@ -448,7 +452,68 @@
 		}
 
 
+		.contentb {
+			background-color: #69c7acc3;
+			text-align: center;
+		}
+		
+			.contentb .fixed-width {
+				background-color: white;
+				padding: 60px 0;
+				height: 180px;
+			}
+		
+				.contentb .item {
+					width: 900px;
+					height: 450px;
+					margin: 80px auto 0 auto;
+					padding-top: 50px;
+					box-shadow: 0 0 8px 3px #999; /* x位移 y位移 模糊 尺寸 顏色 */
+				}
 
+					.contentb .item div:nth-child(1) div:nth-child(1) {
+						width: 600px;
+						height: 300px;
+						overflow: hidden;
+						float: right;
+					}
+					
+						.contentb .item div:nth-child(1) div:nth-child(1) img {
+							width: 100%;
+						}
+		
+					.contentb .item div:nth-child(1) div:nth-child(2) {
+						padding: 20px 50px 0 50px;
+						width: 200px;
+						height: 280px;
+						float: left;
+					}
+		
+					.contentb .item div:nth-child(2) div:nth-child(1) {
+						width: 300px;
+						height: 300px;
+						overflow: hidden;
+						float: left;
+					}
+		
+						.contentb .item div:nth-child(2) div:nth-child(1) img {
+							width: 100%;
+						}
+		
+					.contentb .item div:nth-child(2) div:nth-child(2) {
+							padding: 10px 50px 0 50px;
+							width: 500px;
+							height: 280px;
+							float: right;
+						}
+		
+					.contentb .item a {
+						background-color: #4e5266;
+					}
+					
+					.contentb .item a:hover {
+						background-color: #575b72;
+					}
 
 
 
